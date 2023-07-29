@@ -1149,7 +1149,7 @@ button,
 
 .catalog {
   padding-top: 18px;
-  padding-bottom: 26px;
+  padding-bottom: 30px;
   background-color: #f2f2f2;
 }
 
@@ -1287,7 +1287,7 @@ button,
 
 .card h3 {
   min-height: 57px;
-  margin: 13px 50px 13px 54px;
+  margin: 13px 8.666% 13px 9.36%;
   font-family: "Inter", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -1295,9 +1295,8 @@ button,
 }
 
 .card p {
-  max-width: 416px;
   height: 62px;
-  margin: 0 0 0 54px;
+  margin: 0 26.864% 0 9.36%;
   color: #474747;
   font-size: 14px;
   line-height: 16px;
@@ -1316,6 +1315,56 @@ button,
   fill: #ffffff;
   -webkit-transition: fill 0.3s ease;
   transition: fill 0.3s ease;
+}
+
+.advantages {
+  position: relative;
+  padding-top: 65px;
+  padding-bottom: 69px;
+  background-image: -webkit-image-set(url("../img/bg/bg-advantages@2x.avif") type("image/avif") 2x, url("../img/bg/bg-advantages@1x.avif") type("image/avif") 1x, url("../img/bg/bg-advantages@2x.webp") type("image/webp") 2x, url("../img/bg/bg-advantages@1x.webp") type("image/webp") 1x, url("../img/bg/bg-advantages@2x.png") 2x, url("../img/bg/bg-advantages@1x.png") 1x);
+  background-image: image-set(url("../img/bg/bg-advantages@2x.avif") type("image/avif") 2x, url("../img/bg/bg-advantages@1x.avif") type("image/avif") 1x, url("../img/bg/bg-advantages@2x.webp") type("image/webp") 2x, url("../img/bg/bg-advantages@1x.webp") type("image/webp") 1x, url("../img/bg/bg-advantages@2x.png") 2x, url("../img/bg/bg-advantages@1x.png") 1x);
+  background-color: #222a31;
+  background-repeat: no-repeat;
+  background-position: center bottom -31px;
+}
+
+.advantages__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+  -webkit-column-gap: 32px;
+     -moz-column-gap: 32px;
+          column-gap: 32px;
+  margin: 0;
+  padding: 0 1px 0 14px;
+  list-style: none;
+}
+
+.advantages__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 266px;
+  padding: 54px 15px 15px;
+  border-radius: 5px;
+  border: 2px solid rgba(255, 107, 0, 0.5);
+}
+
+.advantages__item p {
+  margin-top: 51px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
 }
 
 .uikit__sections {

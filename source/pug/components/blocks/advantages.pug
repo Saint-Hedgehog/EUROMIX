@@ -1,0 +1,50 @@
+mixin advantages()
+  -
+    const advantages = [
+      {
+        title: "Сертификаты качества",
+        imgUrl: "img/svg/advantages/certificate.svg",
+        alt: "Certificate",
+        width: "44",
+        height: "51",
+      },
+      {
+        title: "Продукция в наличии на складе",
+        imgUrl: "img/svg/advantages/products-in-stock.png",
+        alt: "Products-in-stock",
+        width: "161",
+        height: "161",
+      },
+      {
+        title: "Развернутая комплектация с ценами",
+        imgUrl: "img/svg/advantages/equipment.svg",
+        alt: "Equipment",
+        width: "49",
+        height: "49",
+      },
+      {
+        title: "Мобильная бригада пуско-наладки оборудования",
+        imgUrl: "img/svg/advantages/team.svg",
+        alt: "Team",
+        width: "57",
+        height: "57",
+      },
+      {
+        title: "Свой автопарк везем застрахованные грузы",
+        imgUrl: "img/svg/advantages/car-park.png",
+        alt: "Car-park",
+        width: "62",
+        height: "49",
+      },
+    ]
+
+  .advantages
+    .container
+      h2.visually-hidden Наши преимущества
+      ul.advantages__list
+        each advantage in advantages
+          li.advantages__item
+            img(src=advantage.imgUrl, alt=advantage.alt,  width: advantage.width,  height: advantage.height)
+            p= advantage.title
+
+
