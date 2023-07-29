@@ -1135,7 +1135,7 @@ button,
   left: 41px;
   width: 49px;
   height: 49px;
-  background: url("../../img/svg/watch.svg") no-repeat center center;
+  background: url("../img/svg/watch.svg") no-repeat center center;
 }
 .bid > div p:nth-of-type(2)::before {
   content: "";
@@ -1144,7 +1144,7 @@ button,
   left: 36px;
   width: 49px;
   height: 49px;
-  background: url("../../img/svg/shake-hands.svg") no-repeat center center;
+  background: url("../img/svg/shake-hands.svg") no-repeat center center;
 }
 
 .catalog {
