@@ -1,0 +1,125 @@
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 4px 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 138px;
+  border-right: 1px solid $color-gainsboro;
+}
+
+.main-nav__link {
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: $color-сharcoal;
+  background-color: transparent;
+  border: none;
+  transition: color $trans-default,
+    background-color $trans-default;
+  cursor: pointer;
+
+  @include hover {
+    background-color: $color-dark-orange;
+  }
+}
+
+.main-nav__link.js-dropdowns {
+  position: relative;
+  padding: 8px 18px 8px 8px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 12px;
+    width: 10px;
+    height: 6px;
+    background-image: url("../img/stack.svg#icon-dropdowns-arrow");
+    background-size: cover;
+    transition: transform $trans-default;
+  }
+}
+
+.main-nav__link.open {
+  color: $color-default-white;
+  background-color: $color-dark-orange;
+
+  &::before {
+    background-image: url("../img/stack.svg#icon-dropdowns-arrow--white");
+    transform: rotate(180deg);
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__item div {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr;
+  width: 100%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: $color-sun;
+  opacity: 0;
+  transition: grid-template-rows $trans-default,
+    padding $trans-default,
+    opacity $trans-default;
+}
+
+.main-nav__link.open+div {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.main-nav__item ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.main-nav__link+div li {
+  border-bottom: 1px solid $color-suva-grey;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.main-nav__link.open+div li:last-of-type a {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.main-nav__link+div a {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.main-nav__link.open+div a {
+  color: $color-сharcoal;
+  transition: color $trans-default,
+    background-color $trans-default;
+
+  @include hover {
+    color: $color-default-white;
+    background-color: $color-safety-orange;
+    }
+}

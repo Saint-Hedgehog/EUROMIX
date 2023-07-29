@@ -1,0 +1,22 @@
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-wrapper {
+  display: flex;
+  align-items: center;
+  min-width: max-content;
+}
+
+.header__logo-wrapper picture,
+.header__logo-wrapper .header__logo {
+  margin-top: 5px;
+}
+
+.header__logo-wrapper p {
+  margin: 0 0 0 3px;
+  font-weight: 500;
+  color: $color-blue-charcoal;
+}

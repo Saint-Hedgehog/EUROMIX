@@ -1,0 +1,35 @@
+mixin intro()
+  .intro
+    .container
+      h1 Мобильный бетонный завод<br><span>EUROMIX CROCUS</span>
+      div.intro__years
+        p 30
+        p лет
+        p успешной<br>работы
+      p «Завод EUROMIX» - производитель бетонных заводов EUROMIX CROCUS - это предприятие, которое за годы партнерства плотного сотрудничества с западными коллегами выработало уникальную стратегию, максимально приблизившись к оптимуму «цена-качество», имеющее большой опыт в производстве строительного и технологического оборудования
+
+      form.bid(action="#", method="GET")
+        h2 Оставьте заявку
+        p Мы отправим вам цены, условия и сроки поставки
+        +custom-input({
+          inputPlaceholder: "Ваше  Имя",
+          inputName: "user-name",
+        })
+        +custom-input({
+          inputType: "tel",
+          inputPlaceholder: "Телефон",
+          inputName: "user-phone",
+        })
+        +btn({text: "ОТПРАВИТЬ", type: "submit"}).btn--blue-charcoal
+        +custom-toggle({
+          inputLabel: "Cогласен с пользовательским соглашением",
+          inputName: "user-agreement",
+          inputValue: "user-agreement-1",
+          inputChecked: true
+        }).custom-toggle--checkbox
+        div
+          p Ответим в течение часа
+          p Индивидуальные условия доставки и оплаты
+
+
+

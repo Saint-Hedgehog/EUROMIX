@@ -1,0 +1,95 @@
+.uikit__component>.btn {
+  display: inline-flex;
+  padding: 10px 20px;
+
+  color: $color-default-white;
+
+  background-color: $color-neon-blue;
+  border: none;
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  &--red {
+    background-color: $color-torch-red;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
+
+.btn {
+  padding: 14px 14px 15px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: $color-default-white;
+  border: none;
+  border-radius: 100px;
+  transition: background-color $trans-default,
+    outline $trans-default,
+    box-shadow $trans-default;
+  cursor: pointer;
+
+  &--blue-charcoal {
+    background-color: $color-blue-charcoal;
+  }
+
+  @include hover-focus {
+    outline: 1px solid $color-default-white;
+    outline-offset: 2px;
+    box-shadow: 0px 0px 0px 2px $color-navy-blue;
+  }
+
+  @include active {
+    background-color: $color-сharcoal;
+  }
+}
+
+
+.button {
+  position: relative;
+  padding: 9px 15px 9px 19px;
+  font-size: 20px;
+  line-height: normal;
+  color: $color-default-black;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  transform: skewX(24deg);
+  cursor: pointer;
+  transition: color $trans-default,
+    background-color $trans-default;
+
+  @include hover {
+    background-color: $color-dark-orange;
+  }
+
+  @include focus {
+    outline: 1px solid $color-default-white;
+    outline-offset: 2px;
+    box-shadow: 0px 0px 0px 2px $color-navy-blue;
+  }
+
+  @include active {
+    background-color: $color-dark-orange;
+    color: $color-default-white;
+  }
+}
+
+.button > span {
+  display: block;
+  transform: skewX(-24deg);
+}
+
+.button.active {
+  color: $color-default-white;
+  background-color: $color-dark-orange;
+  pointer-events: none;
+}

@@ -1,0 +1,204 @@
+mixin cards(isConcretePlants, isProducts, isAccessories)
+  -
+    const concretePlants = [
+      {
+        title: "Мобильные бетонные заводы Euromix Crocus",
+        description: "Мобильный бетонный завод EUROMIX CROCUS 10.500, производительность до 10 м³/ч, весовая система дозирования цемента и инертных заполнителей",
+        image: "crocus",
+        imgUrl: "content/catalog/concrete-plants",
+        altText: "Crocus",
+        href: "#"
+      },
+      {
+        title: "Бетонные заводы серии Euromix Crocus Compact",
+        description: "Мобильный бетонный завод EUROMIX CROCUS 10.500, производительность до 10 м³/ч, весовая система дозирования цемента и инертных заполнителей",
+        image: "crocus-compact",
+        imgUrl: "content/catalog/concrete-plants",
+        altText: "Crocus-Compact",
+        href: "#"
+      },
+      {
+        title: "Бетонные заводы серии Euromix Crocus alfa (скип)",
+        description: "Мобильный бетонный завод EUROMIX CROCUS 10.500, производительность до 10 м³/ч, весовая система дозирования цемента и инертных заполнителей",
+        image: "crocus-alfa-skip",
+        imgUrl: "content/catalog/concrete-plants",
+        altText: "Crocus-Alfa-Skip",
+        href: "#"
+      },
+      {
+        title: "Бетонные заводы серии Euromix Crocus alfa (лента)",
+        description: "Мобильный бетонный завод EUROMIX CROCUS 10.500, производительность до 10 м³/ч, весовая система дозирования цемента и инертных заполнителей",
+        image: "crocus-alfa-ribbon",
+        imgUrl: "content/catalog/concrete-plants",
+        altText: "Crocus-Alfa-Ribbon",
+        href: "#"
+      },
+      {
+        title: "Автомиксер серии Euromix Rolltruck",
+        description: "Мобильный бетонный завод EUROMIX CROCUS 10.500, производительность до 10 м³/ч, весовая система дозирования цемента и инертных заполнителей",
+        image: "rolltruck",
+        imgUrl: "content/catalog/concrete-plants",
+        altText: "Rolltruck",
+        href: "#"
+      },
+    ]
+
+    const products = [
+      {
+        title: "Бетоносмесители",
+        image: "concrete-mixer",
+        imgUrl: "content/catalog/products",
+        altText: "concrete-mixer",
+        href: "#"
+      },
+      {
+        title: "Силосы цемента серии EUROSILO",
+        image: "EUROSILO-series-cement-silos",
+        imgUrl: "content/catalog/products",
+        altText: "EUROSILO-series-cement-silos",
+        href: "#"
+      },
+      {
+        title: "Силосы цемента серии EUROSILO MOBILE",
+        image: "EUROSILO-MOBILE-cement-silos",
+        imgUrl: "content/catalog/products",
+        altText: "EUROSILO-MOBILE-cement-silos",
+        href: "#"
+      },
+      {
+        title: "Станции растаривания МКР типа БИГ-БЭГ",
+        image: "stations-for-unpacking",
+        imgUrl: "content/catalog/products",
+        altText: "stations-for-unpacking",
+        href: "#"
+      },
+      {
+        title: "Дозирующие комплексы инертных материалов",
+        image: "dosing-complexes-of-inert-materials",
+        imgUrl: "content/catalog/products",
+        altText: "dosing-complexes-of-inert-materials",
+        href: "#"
+      },
+      {
+        title: "Дополнительное оборудование",
+        image: "optional-equipment",
+        imgUrl: "content/catalog",
+        altText: "optional-equipment",
+        href: "#"
+      },
+    ]
+
+    const accessories = [
+      {
+        title: "Винтовые конвейеры цемента",
+        image: "screw-conveyors-for-cement",
+        imgUrl: "content/catalog/accessories",
+        altText: "Screw-conveyors-for-cement",
+        href: "#"
+      },
+      {
+        title: "Ленточные транспортеры",
+        image: "belt-conveyors",
+        imgUrl: "content/catalog/accessories",
+        altText: "Belt-conveyors",
+        href: "#"
+      },
+      {
+        title: "Станции загрузки инертных материалов",
+        image: "loading-stations-for-inert-materials",
+        imgUrl: "content/catalog/accessories",
+        altText: "Loading-stations-for-inert-materials",
+        href: "#"
+      },
+      {
+        title: "Дозатор цемента",
+        image: "cement-dispenser",
+        imgUrl: "content/catalog/accessories",
+        altText: "Cement-dispenser",
+        href: "#"
+      },
+      {
+        title: "Весовые дозаторы воды серии ДМВ",
+        image: "weighing-water-dispensers",
+        imgUrl: "content/catalog/accessories",
+        altText: "Weighing-water-dispensers",
+        href: "#"
+      },
+      {
+        title: "Дополнительное оборудование",
+        image: "optional-equipment",
+        imgUrl: "content/catalog",
+        altText: "optional-equipment",
+        href: "#"
+      },
+    ]
+
+  ul.catalog__content-list
+    if isConcretePlants
+      each concretePlant in concretePlants
+        li
+          a.card(href=concretePlant.href)
+            +picture(concretePlant.imgUrl, concretePlant.image, "jpg", 576, 342, concretePlant.altText)
+            h3= concretePlant.title
+            p= concretePlant.description
+            <svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+              <path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+              <g clip-path="url(#clip0_7_71)">
+                <path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_7_71">
+                <rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+      li.catalog__content-go-to-item
+        a.catalog__content-go-to-link(href="#")
+          span ПЕРЕЙТИ В КАТАЛОГ
+          <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_29_838)">
+            <path d="M25.5051 11.3917C25.5037 11.3905 25.5037 11.3905 25.5051 11.3917L18.9219 5.33521C18.316 4.77777 17.3326 4.77777 16.7266 5.33521C16.1207 5.89266 16.1207 6.79743 16.7266 7.35487L20.6604 10.9739L2.46267 10.9727C1.60552 10.9727 0.910925 11.6117 0.910924 12.4003C0.912268 12.7946 1.08558 13.1518 1.36637 13.4101C1.64716 13.6685 2.03544 13.8279 2.46267 13.8279L20.6618 13.8279L16.728 17.447C16.1221 18.0044 16.1221 18.9092 16.728 19.4667C17.3339 20.0241 18.3173 20.0241 18.9233 19.4667L26.6027 12.4016L25.5051 11.3917Z" fill="#FF6B00"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_29_838">
+              <rect width="18.2558" height="18.2558" fill="white" transform="matrix(0.735931 0.677056 -0.735931 0.677056 13.4351 0.0400391)"/>
+            </clipPath>
+            </defs>
+          </svg>
+
+    if isProducts
+      each product in products
+        li
+          a.card(href=product.href)
+            +picture(product.imgUrl, product.image, "jpg", 577, 341, product.altText)
+            h3= product.title
+            <svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+              <path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+              <g clip-path="url(#clip0_7_71)">
+                <path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_7_71">
+                <rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+
+    if isAccessories
+      each accessorie in accessories
+        li
+          a.card(href=accessorie.href)
+            +picture(accessorie.imgUrl, accessorie.image, "jpg", 577, 341, accessorie.altText)
+            h3= accessorie.title
+            <svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+              <path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+              <g clip-path="url(#clip0_7_71)">
+                <path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_7_71">
+                <rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+

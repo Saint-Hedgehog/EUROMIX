@@ -1,0 +1,114 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      //- {
+      //-   href: "index.html",
+      //-   text: "Главная"
+      //- },
+      {
+        href: "#",
+        text: "О ЗАВОДЕ"
+      },
+      {
+        href: "#",
+        text: "КАТАЛОГ"
+      },
+      {
+        href: "#",
+        text: "ЦЕНЫ"
+      },
+      {
+        href: "#",
+        text: "УСЛУГИ"
+      },
+      {
+        href: "#",
+        text: "КОНТАКТЫ"
+      },
+    ]
+
+    const dropdownsLinks = [
+      {
+        href: "#modals",
+        text: "Модальные окна"
+      },
+      {
+        href: "#buttons",
+        text: "Кнопки"
+      },
+      {
+        href: "#forms",
+        text: "Элементы форм"
+      },
+    ]
+
+  header.header(class=headerMods)
+    .container
+      .header-top
+        .header-top__bg-wrapper.stretch-bg-left
+          a.header-top__mail(href="mailto:info@euromix.biz")
+            img(src="img/stack.svg#icon-mail", alt="icon-mail", width="19", height="15")
+            span info@euromix.biz
+          a.header-top__tel(href="tel:+74872704838")
+            img(src="img/stack.svg#icon-tel", alt="icon-tel", width="20", height="20")
+            span +7 (4872) 704-838
+          a.header-top__request-call(href="#") Заказать звонок
+
+          form.search-input(action="#", method="GET")
+            label.search-input__label
+              input.search-input__input(type="text", name="search", placeholder="Поиск" value=inputValue)
+            button.search-input__button(type="submit") Поиск
+              img(src="img/stack.svg#icon-search", alt="icon-search", width="24", height="24")
+
+        .header-top__bg-wrapper.stretch-bg-right
+          a.header-top__login(href="#")
+            img(src="img/stack.svg#icon-user", alt="icon-user", width="26", height="26")
+            span Вход
+          a.header-top__basket(href="#")
+            img(src="img/stack.svg#icon-basket", alt="icon-basket", width="27", height="27")
+            span Корзина
+
+      .header__wrapper
+        .header__logo-wrapper
+          if(currentUrl === "index.html")
+            //- lighthouse снимает 10 баллов SEO за <a> без href
+            +picture("content", "logo", "png", 220, 119, "Логотип")
+          else
+            a.header__logo(href="index.html", aria-label="Переход на главную")
+              +picture("content", "logo", "png", 220, 119, Логотип)
+          p Работаем с 1992 года!
+
+        nav.main-nav
+          //- button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+          //-   +icon("icon-burger", 20, 20)
+          .main-nav__wrapper
+            ul.main-nav__list
+              li.main-nav__item
+                button.main-nav__link.js-dropdowns(type="button", aria-label="Переключатель отображения меню", aria-pressed="false") О ЗАВОДЕ
+                div
+                  ul
+                    each item, index in dropdownsLinks
+                      li
+                        a(href=item.href)= item.text
+              li.main-nav__item
+                button.main-nav__link.js-dropdowns(type="button", aria-label="Переключатель отображения меню", aria-pressed="false") КАТАЛОГ
+                div
+                  ul
+                    each item, index in dropdownsLinks
+                      li
+                        a(href=item.href)= item.text
+              li.main-nav__item
+                a.main-nav__link(href="#") ЦЕНЫ
+              li.main-nav__item
+                a.main-nav__link(href="#") УСЛУГИ
+              li.main-nav__item
+                a.main-nav__link(href="#") КОНТАКТЫ
+
+              //- ul.main-nav__list
+                each link in headerLinks
+                  - const activeState = currentUrl === link.href
+                  li.main-nav__item
+                    if(activeState)
+                      span.main-nav__link.is-active= link.text
+                    else
+                      a.main-nav__link(href=link.href)= link.text

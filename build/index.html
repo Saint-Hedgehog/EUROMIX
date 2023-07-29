@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>ProjectName</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Euromix — бетонные заводы"><link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest" crossorigin="use-credentials">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header-top">
+            <div class="header-top__bg-wrapper stretch-bg-left"><a class="header-top__mail" href="mailto:info@euromix.biz"><img src="img/stack.svg#icon-mail" alt="icon-mail" width="19" height="15"><span>info@euromix.biz</span></a><a class="header-top__tel" href="tel:+74872704838"><img src="img/stack.svg#icon-tel" alt="icon-tel" width="20" height="20"><span>+7 (4872) 704-838</span></a><a class="header-top__request-call" href="#">Заказать звонок</a>
+              <form class="search-input" action="#" method="GET">
+                <label class="search-input__label">
+                  <input class="search-input__input" type="text" name="search" placeholder="Поиск">
+                </label>
+                <button class="search-input__button" type="submit">Поиск<img src="img/stack.svg#icon-search" alt="icon-search" width="24" height="24"></button>
+              </form>
+            </div>
+            <div class="header-top__bg-wrapper stretch-bg-right"><a class="header-top__login" href="#"><img src="img/stack.svg#icon-user" alt="icon-user" width="26" height="26"><span>Вход</span></a><a class="header-top__basket" href="#"><img src="img/stack.svg#icon-basket" alt="icon-basket" width="27" height="27"><span>Корзина</span></a></div>
+          </div>
+          <div class="header__wrapper">
+            <div class="header__logo-wrapper">
+              <picture>
+                <source type="image/avif" srcset="img/content/logo.avif, img/content/logo@2x.avif 2x">
+                <source type="image/webp" srcset="img/content/logo.webp, img/content/logo@2x.webp 2x"><img src="img/content/logo.png" srcset="img/content/logo@2x.png 2x" width="220" height="119" alt="Логотип">
+              </picture>
+              <p>Работаем с 1992 года!</p>
+            </div>
+            <nav class="main-nav">
+              <div class="main-nav__wrapper">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item">
+                    <button class="main-nav__link js-dropdowns" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">О ЗАВОДЕ</button>
+                    <div>
+                      <ul>
+                        <li><a href="#modals">Модальные окна</a></li>
+                        <li><a href="#buttons">Кнопки</a></li>
+                        <li><a href="#forms">Элементы форм</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="main-nav__item">
+                    <button class="main-nav__link js-dropdowns" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">КАТАЛОГ</button>
+                    <div>
+                      <ul>
+                        <li><a href="#modals">Модальные окна</a></li>
+                        <li><a href="#buttons">Кнопки</a></li>
+                        <li><a href="#forms">Элементы форм</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">ЦЕНЫ</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">УСЛУГИ</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">КОНТАКТЫ</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="intro">
+          <div class="container">
+            <h1>Мобильный бетонный завод<br><span>EUROMIX CROCUS</span></h1>
+            <div class="intro__years">
+              <p>30</p>
+              <p>лет</p>
+              <p>успешной<br>работы</p>
+            </div>
+            <p>«Завод EUROMIX» - производитель бетонных заводов EUROMIX CROCUS - это предприятие, которое за годы партнерства плотного сотрудничества с западными коллегами выработало уникальную стратегию, максимально приблизившись к оптимуму «цена-качество», имеющее большой опыт в производстве строительного и технологического оборудования</p>
+            <form class="bid" action="#" method="GET">
+              <h2>Оставьте заявку</h2>
+              <p>Мы отправим вам цены, условия и сроки поставки</p>
+              <div class="custom-input">
+                <label>
+                  <input type="text" name="user-name" placeholder="Ваше  Имя">
+                </label>
+              </div>
+              <div class="custom-input">
+                <label>
+                  <input type="tel" name="user-phone" placeholder="Телефон">
+                </label>
+              </div>
+              <button class="btn btn--blue-charcoal" type="submit">ОТПРАВИТЬ</button>
+              <div class="custom-toggle custom-toggle--checkbox">
+                <label>
+                  <input type="checkbox" value="user-agreement-1" name="user-agreement" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Cогласен с пользовательским соглашением</span>
+                </label>
+              </div>
+              <div>
+                <p>Ответим в течение часа</p>
+                <p>Индивидуальные условия доставки и оплаты</p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="catalog">
+          <div class="container">
+            <h2>КАТАЛОГ</h2>
+            <ul class="catalog__list">
+              <li class="catalog__item">
+                <button class="button active" type="button" data-tab="tab-1" tabindex="-1"><span>Бетонные заводы</span></button>
+              </li>
+              <li class="catalog__item">
+                <button class="button" type="button" data-tab="tab-2"><span>Продукция</span></button>
+              </li>
+              <li class="catalog__item">
+                <button class="button" type="button" data-tab="tab-3"><span>Комлектующие</span></button>
+              </li>
+            </ul>
+            <div class="catalog__content" id="tab-1" data-tab-content>
+              <ul class="catalog__content-list">
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/concrete-plants/crocus.avif, img/content/catalog/concrete-plants/crocus@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/concrete-plants/crocus.webp, img/content/catalog/concrete-plants/crocus@2x.webp 2x"><img src="img/content/catalog/concrete-plants/crocus.jpg" srcset="img/content/catalog/concrete-plants/crocus@2x.jpg 2x" width="576" height="342" alt="Crocus">
+                    </picture>
+                    <h3>Мобильные бетонные заводы Euromix Crocus</h3>
+                    <p>Мобильный бетонный завод EUROMIX CROCUS 10.500, производительность до 10 м³/ч, весовая система дозирования цемента и инертных заполнителей</p><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/concrete-plants/crocus-compact.avif, img/content/catalog/concrete-plants/crocus-compact@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/concrete-plants/crocus-compact.webp, img/content/catalog/concrete-plants/crocus-compact@2x.webp 2x"><img src="img/content/catalog/concrete-plants/crocus-compact.jpg" srcset="img/content/catalog/concrete-plants/crocus-compact@2x.jpg 2x" width="576" height="342" alt="Crocus-Compact">
+                    </picture>
+                    <h3>Бетонные заводы серии Euromix Crocus Compact</h3>
+                    <p>Мобильный бетонный завод EUROMIX CROCUS 10.500, производительность до 10 м³/ч, весовая система дозирования цемента и инертных заполнителей</p><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/concrete-plants/crocus-alfa-skip.avif, img/content/catalog/concrete-plants/crocus-alfa-skip@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/concrete-plants/crocus-alfa-skip.webp, img/content/catalog/concrete-plants/crocus-alfa-skip@2x.webp 2x"><img src="img/content/catalog/concrete-plants/crocus-alfa-skip.jpg" srcset="img/content/catalog/concrete-plants/crocus-alfa-skip@2x.jpg 2x" width="576" height="342" alt="Crocus-Alfa-Skip">
+                    </picture>
+                    <h3>Бетонные заводы серии Euromix Crocus alfa (скип)</h3>
+                    <p>Мобильный бетонный завод EUROMIX CROCUS 10.500, производительность до 10 м³/ч, весовая система дозирования цемента и инертных заполнителей</p><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/concrete-plants/crocus-alfa-ribbon.avif, img/content/catalog/concrete-plants/crocus-alfa-ribbon@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/concrete-plants/crocus-alfa-ribbon.webp, img/content/catalog/concrete-plants/crocus-alfa-ribbon@2x.webp 2x"><img src="img/content/catalog/concrete-plants/crocus-alfa-ribbon.jpg" srcset="img/content/catalog/concrete-plants/crocus-alfa-ribbon@2x.jpg 2x" width="576" height="342" alt="Crocus-Alfa-Ribbon">
+                    </picture>
+                    <h3>Бетонные заводы серии Euromix Crocus alfa (лента)</h3>
+                    <p>Мобильный бетонный завод EUROMIX CROCUS 10.500, производительность до 10 м³/ч, весовая система дозирования цемента и инертных заполнителей</p><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/concrete-plants/rolltruck.avif, img/content/catalog/concrete-plants/rolltruck@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/concrete-plants/rolltruck.webp, img/content/catalog/concrete-plants/rolltruck@2x.webp 2x"><img src="img/content/catalog/concrete-plants/rolltruck.jpg" srcset="img/content/catalog/concrete-plants/rolltruck@2x.jpg 2x" width="576" height="342" alt="Rolltruck">
+                    </picture>
+                    <h3>Автомиксер серии Euromix Rolltruck</h3>
+                    <p>Мобильный бетонный завод EUROMIX CROCUS 10.500, производительность до 10 м³/ч, весовая система дозирования цемента и инертных заполнителей</p><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li class="catalog__content-go-to-item"><a class="catalog__content-go-to-link" href="#"><span>ПЕРЕЙТИ В КАТАЛОГ</span><svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_29_838)">
+<path d="M25.5051 11.3917C25.5037 11.3905 25.5037 11.3905 25.5051 11.3917L18.9219 5.33521C18.316 4.77777 17.3326 4.77777 16.7266 5.33521C16.1207 5.89266 16.1207 6.79743 16.7266 7.35487L20.6604 10.9739L2.46267 10.9727C1.60552 10.9727 0.910925 11.6117 0.910924 12.4003C0.912268 12.7946 1.08558 13.1518 1.36637 13.4101C1.64716 13.6685 2.03544 13.8279 2.46267 13.8279L20.6618 13.8279L16.728 17.447C16.1221 18.0044 16.1221 18.9092 16.728 19.4667C17.3339 20.0241 18.3173 20.0241 18.9233 19.4667L26.6027 12.4016L25.5051 11.3917Z" fill="#FF6B00"/>
+</g>
+<defs>
+<clipPath id="clip0_29_838">
+<rect width="18.2558" height="18.2558" fill="white" transform="matrix(0.735931 0.677056 -0.735931 0.677056 13.4351 0.0400391)"/>
+</clipPath>
+</defs>
+</svg></a></li>
+              </ul>
+            </div>
+            <div class="catalog__content hidden" id="tab-2" data-tab-content>
+              <ul class="catalog__content-list">
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/products/concrete-mixer.avif, img/content/catalog/products/concrete-mixer@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/products/concrete-mixer.webp, img/content/catalog/products/concrete-mixer@2x.webp 2x"><img src="img/content/catalog/products/concrete-mixer.jpg" srcset="img/content/catalog/products/concrete-mixer@2x.jpg 2x" width="577" height="341" alt="concrete-mixer">
+                    </picture>
+                    <h3>Бетоносмесители</h3><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/products/EUROSILO-series-cement-silos.avif, img/content/catalog/products/EUROSILO-series-cement-silos@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/products/EUROSILO-series-cement-silos.webp, img/content/catalog/products/EUROSILO-series-cement-silos@2x.webp 2x"><img src="img/content/catalog/products/EUROSILO-series-cement-silos.jpg" srcset="img/content/catalog/products/EUROSILO-series-cement-silos@2x.jpg 2x" width="577" height="341" alt="EUROSILO-series-cement-silos">
+                    </picture>
+                    <h3>Силосы цемента серии EUROSILO</h3><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/products/EUROSILO-MOBILE-cement-silos.avif, img/content/catalog/products/EUROSILO-MOBILE-cement-silos@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/products/EUROSILO-MOBILE-cement-silos.webp, img/content/catalog/products/EUROSILO-MOBILE-cement-silos@2x.webp 2x"><img src="img/content/catalog/products/EUROSILO-MOBILE-cement-silos.jpg" srcset="img/content/catalog/products/EUROSILO-MOBILE-cement-silos@2x.jpg 2x" width="577" height="341" alt="EUROSILO-MOBILE-cement-silos">
+                    </picture>
+                    <h3>Силосы цемента серии EUROSILO MOBILE</h3><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/products/stations-for-unpacking.avif, img/content/catalog/products/stations-for-unpacking@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/products/stations-for-unpacking.webp, img/content/catalog/products/stations-for-unpacking@2x.webp 2x"><img src="img/content/catalog/products/stations-for-unpacking.jpg" srcset="img/content/catalog/products/stations-for-unpacking@2x.jpg 2x" width="577" height="341" alt="stations-for-unpacking">
+                    </picture>
+                    <h3>Станции растаривания МКР типа БИГ-БЭГ</h3><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/products/dosing-complexes-of-inert-materials.avif, img/content/catalog/products/dosing-complexes-of-inert-materials@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/products/dosing-complexes-of-inert-materials.webp, img/content/catalog/products/dosing-complexes-of-inert-materials@2x.webp 2x"><img src="img/content/catalog/products/dosing-complexes-of-inert-materials.jpg" srcset="img/content/catalog/products/dosing-complexes-of-inert-materials@2x.jpg 2x" width="577" height="341" alt="dosing-complexes-of-inert-materials">
+                    </picture>
+                    <h3>Дозирующие комплексы инертных материалов</h3><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/optional-equipment.avif, img/content/catalog/optional-equipment@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/optional-equipment.webp, img/content/catalog/optional-equipment@2x.webp 2x"><img src="img/content/catalog/optional-equipment.jpg" srcset="img/content/catalog/optional-equipment@2x.jpg 2x" width="577" height="341" alt="optional-equipment">
+                    </picture>
+                    <h3>Дополнительное оборудование</h3><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+              </ul>
+            </div>
+            <div class="catalog__content hidden" id="tab-3" data-tab-content>
+              <ul class="catalog__content-list">
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/accessories/screw-conveyors-for-cement.avif, img/content/catalog/accessories/screw-conveyors-for-cement@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/accessories/screw-conveyors-for-cement.webp, img/content/catalog/accessories/screw-conveyors-for-cement@2x.webp 2x"><img src="img/content/catalog/accessories/screw-conveyors-for-cement.jpg" srcset="img/content/catalog/accessories/screw-conveyors-for-cement@2x.jpg 2x" width="577" height="341" alt="Screw-conveyors-for-cement">
+                    </picture>
+                    <h3>Винтовые конвейеры цемента</h3><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/accessories/belt-conveyors.avif, img/content/catalog/accessories/belt-conveyors@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/accessories/belt-conveyors.webp, img/content/catalog/accessories/belt-conveyors@2x.webp 2x"><img src="img/content/catalog/accessories/belt-conveyors.jpg" srcset="img/content/catalog/accessories/belt-conveyors@2x.jpg 2x" width="577" height="341" alt="Belt-conveyors">
+                    </picture>
+                    <h3>Ленточные транспортеры</h3><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/accessories/loading-stations-for-inert-materials.avif, img/content/catalog/accessories/loading-stations-for-inert-materials@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/accessories/loading-stations-for-inert-materials.webp, img/content/catalog/accessories/loading-stations-for-inert-materials@2x.webp 2x"><img src="img/content/catalog/accessories/loading-stations-for-inert-materials.jpg" srcset="img/content/catalog/accessories/loading-stations-for-inert-materials@2x.jpg 2x" width="577" height="341" alt="Loading-stations-for-inert-materials">
+                    </picture>
+                    <h3>Станции загрузки инертных материалов</h3><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/accessories/cement-dispenser.avif, img/content/catalog/accessories/cement-dispenser@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/accessories/cement-dispenser.webp, img/content/catalog/accessories/cement-dispenser@2x.webp 2x"><img src="img/content/catalog/accessories/cement-dispenser.jpg" srcset="img/content/catalog/accessories/cement-dispenser@2x.jpg 2x" width="577" height="341" alt="Cement-dispenser">
+                    </picture>
+                    <h3>Дозатор цемента</h3><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/accessories/weighing-water-dispensers.avif, img/content/catalog/accessories/weighing-water-dispensers@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/accessories/weighing-water-dispensers.webp, img/content/catalog/accessories/weighing-water-dispensers@2x.webp 2x"><img src="img/content/catalog/accessories/weighing-water-dispensers.jpg" srcset="img/content/catalog/accessories/weighing-water-dispensers@2x.jpg 2x" width="577" height="341" alt="Weighing-water-dispensers">
+                    </picture>
+                    <h3>Весовые дозаторы воды серии ДМВ</h3><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+                <li><a class="card" href="#">
+                    <picture>
+                      <source type="image/avif" srcset="img/content/catalog/optional-equipment.avif, img/content/catalog/optional-equipment@2x.avif 2x">
+                      <source type="image/webp" srcset="img/content/catalog/optional-equipment.webp, img/content/catalog/optional-equipment@2x.webp 2x"><img src="img/content/catalog/optional-equipment.jpg" srcset="img/content/catalog/optional-equipment@2x.jpg 2x" width="577" height="341" alt="optional-equipment">
+                    </picture>
+                    <h3>Дополнительное оборудование</h3><svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+<path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+<g clip-path="url(#clip0_7_71)">
+<path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+</g>
+<defs>
+<clipPath id="clip0_7_71">
+<rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+</clipPath>
+</defs>
+</svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container"></div>
+      </footer>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

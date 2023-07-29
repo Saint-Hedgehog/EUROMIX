@@ -1,0 +1,23 @@
+mixin catalog()
+  .catalog
+    .container
+      h2 КАТАЛОГ
+      ul.catalog__list
+        li.catalog__item
+          button.button.active(type="button", data-tab="tab-1", tabindex="-1")
+            span Бетонные заводы
+        li.catalog__item
+          button.button(type="button", data-tab="tab-2")
+            span Продукция
+        li.catalog__item
+          button.button(type="button", data-tab="tab-3")
+            span Комлектующие
+
+      div#tab-1.catalog__content(data-tab-content)
+        +cards(true, false, false)
+
+      div#tab-2.catalog__content.hidden(data-tab-content)
+        +cards(false, true, false)
+      div#tab-3.catalog__content.hidden(data-tab-content)
+        +cards(false, false, true)
+

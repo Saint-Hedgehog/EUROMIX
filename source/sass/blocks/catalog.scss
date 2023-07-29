@@ -1,0 +1,78 @@
+.catalog {
+  padding-top: 18px;
+  padding-bottom: 26px;
+  background-color: $color-white-smoke;
+}
+
+.catalog h2 {
+  margin: 0 0 12px 15px;
+  font-size: 24px;
+  font-weight: 700;
+  color: $color-blue-charcoal;
+}
+
+.catalog__list {
+  display: flex;
+  justify-content: center;
+  gap: 27px;
+  margin: 0 0 25px 15px;
+  padding: 0 25px 0 0;
+  background-color: $color-default-white;
+  list-style: none;
+}
+
+.catalog__content {
+  margin-left: 15px;
+}
+
+.catalog__content.hidden {
+  display: none;
+}
+
+.catalog__content-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 29px;
+  row-gap: 27px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__content-go-to-item {
+  margin-left: 84px;
+  margin-top: 68px;
+}
+
+.catalog__content-go-to-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 368px;
+  padding-left: 39px;
+
+  background-color: $color-default-white;
+  transition: box-shadow $trans-default,
+    opacity $trans-default;
+
+  @include hover-focus {
+    box-shadow: 0px 4px 20px 0px $color-black-opacity25;
+  }
+
+  @include active {
+    opacity: 0.7;
+  }
+}
+
+.catalog__content-go-to-link span {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $color-safety-orange;
+}
+
+.catalog__content-go-to-link svg {
+  width: 27px;
+  height: 25px;
+  margin-left: 12px;
+}
