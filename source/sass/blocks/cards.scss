@@ -1,3 +1,11 @@
+.card-list {
+  display: grid;
+  column-gap: 29px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .card {
   position: relative;
   display: block;
@@ -7,54 +15,140 @@
   border-radius: 5px;
   transition: box-shadow $trans-default;
 
+  &--price {
+    padding-bottom: 0;
+  }
+
   @include hover-focus {
     box-shadow: 0px 4px 20px 0px $color-black-opacity25;
   }
 
-  @include active {
-    svg {
-      opacity: 0.7;
-      transition: opacity $trans-default;
+  &--price {
+    @include hover-focus {
+      box-shadow: 0px 4px 20px 0px $color-zircon;
     }
+  }
 
-    svg g {
-      fill: $color-suva-grey;
+  @include active {
+    svg > path {
+      fill: $color-blue-charcoal;
+    }
+  }
+
+  &--price {
+    @include active {
+      svg > path {
+        fill: $color-safety-orange;
+      }
     }
   }
 }
 
-.card img {
-  width: 577px;
-  height: 342px;
+.card {
+  img {
+    width: 577px;
+    height: 342px;
+    border-radius: 5px;
+    object-fit: contain;
+  }
+
+  &--price img {
+    width: 274px;
+    height: 259px;
+  }
+}
+
+.card--price .card__in-stock {
+  display: block;
+  margin: 16px 19px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: $color-safety-orange;
+}
+
+.card {
+  h3 {
+    min-height: 57px;
+    margin: 13px 8.666% 13px 9.36%;
+    font-family: $ff-inter;
+    font-size: 24px;
+    font-weight: 400;
+    color: $color-default-black;
+  }
+
+  &--price h3 {
+    margin: 5px 19px 20px;
+    font-family: $ff-ubuntu;
+    font-size: 20px;
+  }
+}
+
+.card {
+  & p {
+    min-height: 62px;
+    margin: 0 26.864% 0 9.36%;
+    color: $color-сharcoal;
+    font-size: 14px;
+    line-height: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &--price p {
+    min-height: auto;
+    margin: 0 19px 26px;
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  &--price p span {
+    font-size: 15px;
+  }
+}
+
+.card--price button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 51px;
+  padding: 0 52px 0 31px;
+  font-size: 16px;
+  font-weight: 500;
+  color: $color-safety-orange;
   border-radius: 5px;
-  object-fit: contain;
+  border: none;
+  background-color: $color-azure;
+  transition: background-color $trans-default;
+  cursor: pointer;
+
+  @include hover-focus {
+    background-color: $color-gainsboro;
+  }
+
+  @include active {
+    svg > path {
+      fill: $color-blue-charcoal;
+    }
+  }
 }
 
-.card h3 {
-  min-height: 57px;
-  margin: 13px 8.666% 13px 9.36%;
-  font-family: $ff-inter;
-  font-size: 24px;
-  font-weight: 400;
-  color: $color-default-black;
-}
-
-.card p {
-  height: 62px;
-  margin: 0 26.864% 0 9.36%;
-  color: $color-сharcoal;
-  font-size: 14px;
-  line-height: 16px;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.card--price button img {
+  width: 27px;
+  height: 27px;
+  margin-right: 11px;
 }
 
 .card svg {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 93px;
-  height: 93px;
+  width: 57px;
+  height: 57px;
+
+  path {
+    transition: fill $trans-default;
+  }
 
   g {
     fill: $color-default-white;

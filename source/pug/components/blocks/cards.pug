@@ -1,4 +1,4 @@
-mixin cards(isConcretePlants, isProducts, isAccessories)
+mixin cards(isConcretePlants, isGoods, isAccessories, isCardsPrice)
   -
     const concretePlants = [
       {
@@ -43,39 +43,39 @@ mixin cards(isConcretePlants, isProducts, isAccessories)
       },
     ]
 
-    const products = [
+    const goods = [
       {
         title: "Бетоносмесители",
         image: "concrete-mixer",
-        imgUrl: "content/catalog/products",
+        imgUrl: "content/catalog/goods",
         altText: "concrete-mixer",
         href: "#"
       },
       {
         title: "Силосы цемента серии EUROSILO",
         image: "EUROSILO-series-cement-silos",
-        imgUrl: "content/catalog/products",
+        imgUrl: "content/catalog/goods",
         altText: "EUROSILO-series-cement-silos",
         href: "#"
       },
       {
         title: "Силосы цемента серии EUROSILO MOBILE",
         image: "EUROSILO-MOBILE-cement-silos",
-        imgUrl: "content/catalog/products",
+        imgUrl: "content/catalog/goods",
         altText: "EUROSILO-MOBILE-cement-silos",
         href: "#"
       },
       {
         title: "Станции растаривания МКР типа БИГ-БЭГ",
         image: "stations-for-unpacking",
-        imgUrl: "content/catalog/products",
+        imgUrl: "content/catalog/goods",
         altText: "stations-for-unpacking",
         href: "#"
       },
       {
         title: "Дозирующие комплексы инертных материалов",
         image: "dosing-complexes-of-inert-materials",
-        imgUrl: "content/catalog/products",
+        imgUrl: "content/catalog/goods",
         altText: "dosing-complexes-of-inert-materials",
         href: "#"
       },
@@ -133,7 +133,46 @@ mixin cards(isConcretePlants, isProducts, isAccessories)
       },
     ]
 
-  ul.catalog__content-list
+    const popularGoods = [
+      {
+        image: "popular-goods",
+        imgUrl: "content/popular-goods",
+        altText: "popular-goods",
+        inStock: true,
+        title: "Мобильные бетонные заводы Euromix Crocus",
+        price: "1 212 000",
+        href: "#"
+      },
+      {
+        image: "popular-goods",
+        imgUrl: "content/popular-goods",
+        altText: "popular-goods",
+        inStock: true,
+        title: "Мобильные бетонные заводы Euromix Crocus",
+        price: "1 212 000",
+        href: "#"
+      },
+      {
+        image: "popular-goods",
+        imgUrl: "content/popular-goods",
+        altText: "popular-goods",
+        inStock: true,
+        title: "Мобильные бетонные заводы Euromix Crocus",
+        price: "1 212 000",
+        href: "#"
+      },
+      {
+        image: "popular-goods",
+        imgUrl: "content/popular-goods",
+        altText: "popular-goods",
+        inStock: true,
+        title: "Мобильные бетонные заводы Euromix Crocus",
+        price: "1 212 000",
+        href: "#"
+      },
+    ]
+
+  ul.card-list
     if isConcretePlants
       each concretePlant in concretePlants
         li
@@ -166,16 +205,16 @@ mixin cards(isConcretePlants, isProducts, isAccessories)
             </defs>
           </svg>
 
-    if isProducts
-      each product in products
+    if isGoods
+      each item in goods
         li
-          a.card(href=product.href)
-            +picture(product.imgUrl, product.image, "jpg", 577, 341, product.altText)
-            h3= product.title
+          a.card(href=item.href)
+            +picture(item.imgUrl, item.image, "jpg", 577, 341, item.altText)
+            h3= item.title
             <svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
               <path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
               <g clip-path="url(#clip0_7_71)">
-                <path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+                <path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z" fill="white"/>
               </g>
               <defs>
                 <clipPath id="clip0_7_71">
@@ -202,3 +241,27 @@ mixin cards(isConcretePlants, isProducts, isAccessories)
               </defs>
             </svg>
 
+    if isCardsPrice
+      each item in popularGoods
+        li
+          .card.card--price(href=item.href)
+            +picture(item.imgUrl, item.image, "jpg", 274, 259, item.altText)
+            if item.inStock
+              span.card__in-stock В Наличии
+            h3= item.title
+            p=item.price
+             span  руб
+            button(type="button")
+              img(src="img/stack.svg#icon-basket--safety-orange", alt="icon-basket", width="27", height="27")
+              span В Корзину
+              <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M57 52V12.0711C57 7.61654 51.6143 5.38572 48.4645 8.53554L8.53553 48.4645C5.38571 51.6143 7.61654 57 12.0711 57H52C54.7614 57 57 54.7614 57 52Z" fill="#FF6B00"/>
+                <g clip-path="url(#clip0_20_44)">
+                  <path d="M48.837 37.4698C48.836 37.4688 48.836 37.4688 48.837 37.4698L44.0943 32.7271C43.6578 32.2906 42.9493 32.2906 42.5127 32.7271C42.0762 33.1636 42.0762 33.8721 42.5127 34.3087L45.3468 37.1427L32.2365 37.1417C31.619 37.1417 31.1186 37.6421 31.1186 38.2596C31.1196 38.5684 31.2445 38.8481 31.4467 39.0504C31.649 39.2527 31.9288 39.3775 32.2365 39.3775L45.3477 39.3775L42.5137 42.2116C42.0772 42.6481 42.0772 43.3566 42.5137 43.7931C42.9502 44.2296 43.6587 44.2296 44.0953 43.7931L49.6278 38.2606L48.837 37.4698Z" fill="white"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_20_44">
+                  <rect x="40.1414" y="28.5806" width="13.6882" height="13.6882" rx="3" transform="rotate(45 40.1414 28.5806)" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>

@@ -14,10 +14,9 @@ mixin catalog()
             span Комлектующие
 
       div#tab-1.catalog__content(data-tab-content)
-        +cards(true, false, false)
-
+          +cards(true, false, false, false)
       div#tab-2.catalog__content.hidden(data-tab-content)
-        +cards(false, true, false)
+          +cards(false, true, false, false)
       div#tab-3.catalog__content.hidden(data-tab-content)
-        +cards(false, false, true)
+          +cards(false, false, true, false)
 

@@ -1,0 +1,18 @@
+.popular-goods {
+  padding-bottom: 106px;
+}
+
+.popular-goods h2 {
+  margin: 0;
+  margin-bottom: 40px;
+  padding-left: 14px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  color: $color-blue-charcoal;
+}
+
+.popular-goods .card-list {
+  grid-template-columns: repeat(4, 1fr);
+  padding-left: 14px;
+}

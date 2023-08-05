@@ -1,5 +1,40 @@
 mixin partners()
+  -
+    const partnersSliderList = [
+      {
+        path: "../img/slides/partners",
+        image: "partners",
+        format: "png",
+        width: "577",
+        height: "268",
+        altText: "partners",
+      },
+      {
+        path: "../img/slides/partners",
+        image: "partners",
+        format: "png",
+        width: "577",
+        height: "268",
+        altText: "partners",
+      },
+      {
+        path: "../img/slides/partners",
+        image: "partners",
+        format: "png",
+        width: "577",
+        height: "268",
+        altText: "partners",
+      },
+    ]
+
   .partners
     .container
       h2 НАШИ ПАРТНЕРЫ
-      p мы работаем с лучшими партнерами В ассортименте нашего завода шесть типов бетонных заводов, начиная от супермобильных бетонных заводов EUROMIX CROCUS серии 750, бетонных заводов серии 30/800.4 COMPACT в
+      p Мы работаем с лучшими партнерами в ассортименте нашего завода шесть типов бетонных заводов, начиная от супермобильных бетонных заводов euromix crocus серии 750, бетонных заводов серии 30/800.4 compact в
+      .partners__slider-container
+        .partners__slider.swiper
+          .swiper-wrapper
+            each item in partnersSliderList
+              .partners__slide.swiper-slide
+                +img(item.path, item.image, item.format, item.width, item.height, item.altText)
+        .partners__slider-pagination

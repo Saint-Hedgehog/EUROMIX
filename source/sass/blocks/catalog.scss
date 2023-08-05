@@ -29,14 +29,9 @@
   display: none;
 }
 
-.catalog__content-list {
-  display: grid;
+.catalog__content .card-list {
   grid-template-columns: 1fr 1fr;
-  column-gap: 29px;
   row-gap: 27px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .catalog__content-go-to-item {

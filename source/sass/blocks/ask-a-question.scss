@@ -1,0 +1,108 @@
+.ask-a-question {
+  min-height: 483px;
+  padding-top: 38px;
+  background-image: image-set(url("../img/bg/ask-a-question/bg-ask-a-question@2x.avif") type("image/avif") 2x,
+      url("../img/bg/ask-a-question/bg-ask-a-question@1x.avif") type("image/avif") 1x,
+      url("../img/bg/ask-a-question/bg-ask-a-question@2x.webp") type("image/webp") 2x,
+      url("../img/bg/ask-a-question/bg-ask-a-question@1x.webp") type("image/webp") 1x,
+      url("../img/bg/ask-a-question/bg-ask-a-question@2x.png") 2x,
+      url("../img/bg/ask-a-question/bg-ask-a-question@1x.png") 1x);
+  background-color: $color-blue-charcoal;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.ask-a-question .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-right: 314px;
+}
+
+.ask-a-question__phone {
+  grid-column: -1/1;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+}
+
+.ask-a-question__phone-number {
+  margin-right: 28px;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+  color: $color-default-white;
+  transition: color $trans-default,
+    opacity $trans-default;
+
+  @include hover {
+    color: $color-safety-orange;
+  }
+
+  @include active {
+    opacity: 0.7;
+  }
+}
+
+.ask-a-question__tel {
+  margin-right: 15px;
+
+  @include hover {
+    svg {
+      fill: $color-safety-orange;
+    }
+  }
+
+  @include active {
+    svg {
+      opacity: 0.7;
+    }
+  }
+}
+
+.ask-a-question__tel svg {
+  fill: $color-default-white;
+  transition: fill $trans-default,
+    opacity $trans-default;
+}
+
+.ask-a-question__telegram svg {
+  fill: $color-default-white;
+  transition: fill $trans-default,
+    opacity $trans-default;
+}
+
+.ask-a-question__telegram {
+  @include hover {
+    svg {
+      fill: $color-safety-orange;
+    }
+  }
+
+  @include active {
+    svg {
+      opacity: 0.7;
+    }
+  }
+}
+
+.ask-a-question h2 {
+  grid-column: -1/1;
+  justify-self: center;
+  margin: 28px 0 8px 0;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  color: $color-safety-orange;
+}
+
+.ask-a-question p {
+  grid-column: -1/1;
+  justify-self: center;
+  margin: 0;
+  padding-right: 35px;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 500;
+  color: $color-default-white;
+}
