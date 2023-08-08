@@ -1,5 +1,6 @@
 const initTabs = () => {
   const catalog = document.querySelector('.catalog');
+  const servicesAndSolutions = document.querySelector('.services-and-solutions');
 
   const init = (section, header, content) => {
     header.forEach(function (item) {
@@ -26,6 +27,13 @@ const initTabs = () => {
     const contentBoxesCatalog = catalog.querySelectorAll('[data-tab-content]');
 
     init(catalog, tabHeadersCatalog, contentBoxesCatalog);
+  }
+
+  if (servicesAndSolutions) {
+    const tabHeadersServicesAndSolutions = servicesAndSolutions.querySelectorAll('[data-tab]');
+    const contentBoxesServicesAndSolutions = servicesAndSolutions.querySelectorAll('[data-tab-content]');
+
+    init(servicesAndSolutions, tabHeadersServicesAndSolutions, contentBoxesServicesAndSolutions);
   }
 };
 

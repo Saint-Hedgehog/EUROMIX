@@ -1,4 +1,5 @@
-mixin cards(isConcretePlants, isGoods, isAccessories, isCardsPrice)
+//- mixin cards(isConcretePlants, isGoods, isAccessories, isPrice, isProjects)
+mixin cards(cardName)
   -
     const concretePlants = [
       {
@@ -141,7 +142,6 @@ mixin cards(isConcretePlants, isGoods, isAccessories, isCardsPrice)
         inStock: true,
         title: "Мобильные бетонные заводы Euromix Crocus",
         price: "1 212 000",
-        href: "#"
       },
       {
         image: "popular-goods",
@@ -150,7 +150,6 @@ mixin cards(isConcretePlants, isGoods, isAccessories, isCardsPrice)
         inStock: true,
         title: "Мобильные бетонные заводы Euromix Crocus",
         price: "1 212 000",
-        href: "#"
       },
       {
         image: "popular-goods",
@@ -159,7 +158,6 @@ mixin cards(isConcretePlants, isGoods, isAccessories, isCardsPrice)
         inStock: true,
         title: "Мобильные бетонные заводы Euromix Crocus",
         price: "1 212 000",
-        href: "#"
       },
       {
         image: "popular-goods",
@@ -168,29 +166,60 @@ mixin cards(isConcretePlants, isGoods, isAccessories, isCardsPrice)
         inStock: true,
         title: "Мобильные бетонные заводы Euromix Crocus",
         price: "1 212 000",
-        href: "#"
+      },
+    ]
+
+    const projects = [
+      {
+        href: "#",
+        image: "news",
+        imgUrl: "content/services-and-solutions",
+        altText: "News",
+        title: "В Москву отправлен бетоносмеситель euromix 600.200.",
+      },
+      {
+        href: "#",
+        image: "news",
+        imgUrl: "content/services-and-solutions",
+        altText: "News",
+        title: "В Москву отправлен бетоносмеситель euromix 600.200.",
+      },
+      {
+        href: "#",
+        image: "news",
+        imgUrl: "content/services-and-solutions",
+        altText: "News",
+        title: "В Москву отправлен бетоносмеситель euromix 600.200.",
+      },
+      {
+        href: "#",
+        image: "news",
+        imgUrl: "content/services-and-solutions",
+        altText: "News",
+        title: "В Москву отправлен бетоносмеситель euromix 600.200.",
       },
     ]
 
   ul.card-list
-    if isConcretePlants
+    if (cardName === "concretePlants")
       each concretePlant in concretePlants
         li
-          a.card(href=concretePlant.href)
-            +picture(concretePlant.imgUrl, concretePlant.image, "jpg", 576, 342, concretePlant.altText)
-            h3= concretePlant.title
-            p= concretePlant.description
-            <svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
-              <path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
-              <g clip-path="url(#clip0_7_71)">
-                <path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_7_71">
-                <rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
-                </clipPath>
-              </defs>
-            </svg>
+          article
+            a.card(href=concretePlant.href)
+              +picture(concretePlant.imgUrl, concretePlant.image, "jpg", 576, 342, concretePlant.altText)
+              h3= concretePlant.title
+              p= concretePlant.description
+              <svg width="93" height="93" viewBox="0 0 93 93"  xmlns="http://www.w3.org/2000/svg">
+                <path d="M93 88V12.0711C93 7.61654 87.6143 5.38571 84.4645 8.53553L8.53553 84.4645C5.38571 87.6143 7.61655 93 12.0711 93H88C90.7614 93 93 90.7614 93 88Z" fill="#FF6B00"/>
+                <g clip-path="url(#clip0_7_71)">
+                  <path d="M77.5051 60.3387C77.5037 60.3373 77.5037 60.3373 77.5051 60.3387L70.9219 53.7555C70.316 53.1496 69.3326 53.1496 68.7266 53.7555C68.1207 54.3614 68.1207 55.3449 68.7266 55.9508L72.6604 59.8846L54.4627 59.8832C53.6055 59.8832 52.9109 60.5778 52.9109 61.435C52.9123 61.8636 53.0856 62.2518 53.3664 62.5326C53.6472 62.8134 54.0354 62.9867 54.4627 62.9867L72.6618 62.9867L68.728 66.9205C68.1221 67.5264 68.1221 68.5099 68.728 69.1158C69.3339 69.7217 70.3173 69.7217 70.9233 69.1158L78.6027 61.4363L77.5051 60.3387Z"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_7_71">
+                  <rect x="65.4351", y="48", width="19", height="19", rx="3", transform="rotate(45 65.4351 48)", fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
       li.catalog__content-go-to-item
         a.catalog__content-go-to-link(href="#")
           span ПЕРЕЙТИ В КАТАЛОГ
@@ -200,12 +229,12 @@ mixin cards(isConcretePlants, isGoods, isAccessories, isCardsPrice)
             </g>
             <defs>
             <clipPath id="clip0_29_838">
-              <rect width="18.2558" height="18.2558" fill="white" transform="matrix(0.735931 0.677056 -0.735931 0.677056 13.4351 0.0400391)"/>
+              <rect width="18.2558", height="18.2558", fill="white", transform="matrix(0.735931 0.677056 -0.735931 0.677056 13.4351 0.0400391)"/>
             </clipPath>
             </defs>
           </svg>
 
-    if isGoods
+    if (cardName === "goods")
       each item in goods
         li
           a.card(href=item.href)
@@ -218,12 +247,12 @@ mixin cards(isConcretePlants, isGoods, isAccessories, isCardsPrice)
               </g>
               <defs>
                 <clipPath id="clip0_7_71">
-                <rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+                <rect x="65.4351", y="48", width="19", height="19", rx="3", transform="rotate(45 65.4351 48)", fill="white"/>
                 </clipPath>
               </defs>
             </svg>
 
-    if isAccessories
+    if (cardName === "accessories")
       each accessorie in accessories
         li
           a.card(href=accessorie.href)
@@ -236,15 +265,15 @@ mixin cards(isConcretePlants, isGoods, isAccessories, isCardsPrice)
               </g>
               <defs>
                 <clipPath id="clip0_7_71">
-                <rect x="65.4351" y="48" width="19" height="19" rx="3" transform="rotate(45 65.4351 48)" fill="white"/>
+                <rect x="65.4351", y="48", width="19", height="19", rx="3", transform="rotate(45 65.4351 48)", fill="white"/>
                 </clipPath>
               </defs>
             </svg>
 
-    if isCardsPrice
+    if (cardName === "price")
       each item in popularGoods
         li
-          .card.card--price(href=item.href)
+          .card.card--price
             +picture(item.imgUrl, item.image, "jpg", 274, 259, item.altText)
             if item.inStock
               span.card__in-stock В Наличии
@@ -261,7 +290,27 @@ mixin cards(isConcretePlants, isGoods, isAccessories, isCardsPrice)
                 </g>
                 <defs>
                   <clipPath id="clip0_20_44">
-                  <rect x="40.1414" y="28.5806" width="13.6882" height="13.6882" rx="3" transform="rotate(45 40.1414 28.5806)" fill="white"/>
+                  <rect x="40.1414", y="28.5806", width="13.6882", height="13.6882", rx="3", transform="rotate(45 40.1414 28.5806)", fill="white"/>
                 </clipPath>
                 </defs>
               </svg>
+
+    if (cardName === "projects")
+      each project in projects
+        li
+          .card.card--projects
+            a(href=project.href)
+              .img-container
+                +picture(project.imgUrl, project.image, "jpg", 273, 150, project.altText)
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M57 52V12.0711C57 7.61654 51.6143 5.38572 48.4645 8.53554L8.53553 48.4645C5.38571 51.6143 7.61654 57 12.0711 57H52C54.7614 57 57 54.7614 57 52Z" fill="#FF6B00"/>
+                  <g clip-path="url(#clip0_20_44)">
+                    <path d="M48.837 37.4698C48.836 37.4688 48.836 37.4688 48.837 37.4698L44.0943 32.7271C43.6578 32.2906 42.9493 32.2906 42.5127 32.7271C42.0762 33.1636 42.0762 33.8721 42.5127 34.3087L45.3468 37.1427L32.2365 37.1417C31.619 37.1417 31.1186 37.6421 31.1186 38.2596C31.1196 38.5684 31.2445 38.8481 31.4467 39.0504C31.649 39.2527 31.9288 39.3775 32.2365 39.3775L45.3477 39.3775L42.5137 42.2116C42.0772 42.6481 42.0772 43.3566 42.5137 43.7931C42.9502 44.2296 43.6587 44.2296 44.0953 43.7931L49.6278 38.2606L48.837 37.4698Z" fill="white"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_20_44">
+                    <rect x="40.1414", y="28.5806", width="13.6882", height="13.6882", rx="3", transform="rotate(45 40.1414 28.5806)", fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+            h3= project.title

@@ -30,14 +30,14 @@
   }
 
   @include active {
-    svg > path {
+    svg>path {
       fill: $color-blue-charcoal;
     }
   }
 
   &--price {
     @include active {
-      svg > path {
+      svg>path {
         fill: $color-safety-orange;
       }
     }
@@ -56,6 +56,15 @@
     width: 274px;
     height: 259px;
   }
+
+  &--projects img {
+    width: 273px;
+    height: 150px;
+  }
+}
+
+.card--projects .img-container {
+  position: relative;
 }
 
 .card--price .card__in-stock {
@@ -80,6 +89,14 @@
     margin: 5px 19px 20px;
     font-family: $ff-ubuntu;
     font-size: 20px;
+  }
+
+  &--projects h3 {
+    margin: 15px 0 0 0;
+    font-family: $ff-ubuntu;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
   }
 }
 
@@ -127,7 +144,7 @@
   }
 
   @include active {
-    svg > path {
+    svg>path {
       fill: $color-blue-charcoal;
     }
   }
@@ -139,19 +156,32 @@
   margin-right: 11px;
 }
 
-.card svg {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 57px;
-  height: 57px;
+.card {
+  & svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 93px;
+    height: 93px;
 
-  path {
-    transition: fill $trans-default;
+    path {
+      transition: fill $trans-default;
+    }
+
+    g {
+      fill: $color-default-white;
+      transition: fill $trans-default;
+    }
   }
 
-  g {
-    fill: $color-default-white;
-    transition: fill $trans-default;
+  &--price svg {
+    width: 57px;
+    height: 57px;
+  }
+
+  &--projects svg {
+    right: 1px;
+    width: 57px;
+    height: 57px;
   }
 }

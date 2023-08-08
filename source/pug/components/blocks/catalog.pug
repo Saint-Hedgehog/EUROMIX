@@ -1,5 +1,5 @@
 mixin catalog()
-  .catalog
+  section.catalog
     .container
       h2 КАТАЛОГ
       ul.catalog__list
@@ -14,9 +14,9 @@ mixin catalog()
             span Комлектующие
 
       div#tab-1.catalog__content(data-tab-content)
-          +cards(true, false, false, false)
+          +cards("concretePlants")
       div#tab-2.catalog__content.hidden(data-tab-content)
-          +cards(false, true, false, false)
+          +cards("goods")
       div#tab-3.catalog__content.hidden(data-tab-content)
-          +cards(false, false, true, false)
+          +cards("accessories")
 

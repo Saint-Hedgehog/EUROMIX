@@ -41,6 +41,10 @@
     background-color: $color-blue-charcoal;
   }
 
+  &--safety-orange {
+    background-color: $color-safety-orange;
+  }
+
   @include hover-focus {
     outline: 1px solid $color-default-white;
     outline-offset: 2px;
@@ -51,7 +55,6 @@
     background-color: $color-сharcoal;
   }
 }
-
 
 .button {
   position: relative;
@@ -81,15 +84,65 @@
     background-color: $color-dark-orange;
     color: $color-default-white;
   }
+
+  &--blue-charcoal {
+    display: flex;
+    align-items: center;
+    width: 214px;
+    min-height: 52px;
+    padding: 0 0 6px 73px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: start;
+    color: $color-blue-charcoal;
+    border-radius: 5px;
+    transform: skewX(21deg);
+
+    @include hover {
+      color: $color-default-white;
+      background-color: $color-blue-charcoal;
+
+      svg {
+        fill: $color-default-white;
+      }
+    }
+  }
 }
 
-.button > span {
-  display: block;
-  transform: skewX(-24deg);
+.button--blue-charcoal svg {
+  position: absolute;
+  top: 50%;
+  left: 22px;
+  margin-right: 15px;
+  transform: skewX(-21deg) translateY(-50%);
+  fill: $color-safety-orange;
+  transition: fill $trans-default;
 }
 
-.button.active {
-  color: $color-default-white;
-  background-color: $color-dark-orange;
-  pointer-events: none;
+.button {
+  &>span {
+    display: block;
+    transform: skewX(-24deg);
+  }
+
+  &--blue-charcoal>span {
+    transform: skewX(-21deg);
+  }
+}
+
+.button {
+  &.active {
+    color: $color-default-white;
+    background-color: $color-dark-orange;
+    pointer-events: none;
+  }
+
+  &--blue-charcoal.active {
+    background-color: $color-blue-charcoal;
+  }
+
+  &--blue-charcoal.active svg {
+    fill: $color-default-white;
+  }
 }
