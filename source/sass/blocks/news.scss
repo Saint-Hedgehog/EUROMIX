@@ -1,0 +1,23 @@
+.news {
+  padding: 40px 0 38px;
+}
+
+.news h2 {
+  margin: 0 0 0 15px;
+  color: $color-blue-charcoal;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.news .card-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 36px;
+  margin: 62px -5px 6px 15px;
+  list-style: none;
+}
+
+.news .btn {
+  margin-left: auto;
+  margin-right: -2px;
+}

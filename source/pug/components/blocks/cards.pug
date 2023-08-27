@@ -200,6 +200,23 @@ mixin cards(cardName)
       },
     ]
 
+    const completedProjects = [
+      {
+        href: "#",
+        image: "news2",
+        imgUrl: "content/completed-projects",
+        altText: "News2",
+        title: "В город Хабаровск произведена отгрузка бетоносмесителя euromix 600.300м.",
+      },
+      {
+        href: "#",
+        image: "news2",
+        imgUrl: "content/completed-projects",
+        altText: "News2",
+        title: "В город Хабаровск произведена отгрузка бетоносмесителя euromix 600.300м.",
+      },
+    ]
+
   ul.card-list
     if (cardName === "concretePlants")
       each concretePlant in concretePlants
@@ -314,3 +331,29 @@ mixin cards(cardName)
                   </defs>
                 </svg>
             h3= project.title
+
+    if (cardName === "completed-projects")
+      each project in completedProjects
+        li
+          .card.card--completed-projects
+            a(href=project.href)
+              .img-container
+                +picture(project.imgUrl, project.image, "jpg", 273, 150, project.altText)
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M57 52V12.0711C57 7.61654 51.6143 5.38572 48.4645 8.53554L8.53553 48.4645C5.38571 51.6143 7.61654 57 12.0711 57H52C54.7614 57 57 54.7614 57 52Z" fill="#FF6B00"/>
+                  <g clip-path="url(#clip0_20_44)">
+                    <path d="M48.837 37.4698C48.836 37.4688 48.836 37.4688 48.837 37.4698L44.0943 32.7271C43.6578 32.2906 42.9493 32.2906 42.5127 32.7271C42.0762 33.1636 42.0762 33.8721 42.5127 34.3087L45.3468 37.1427L32.2365 37.1417C31.619 37.1417 31.1186 37.6421 31.1186 38.2596C31.1196 38.5684 31.2445 38.8481 31.4467 39.0504C31.649 39.2527 31.9288 39.3775 32.2365 39.3775L45.3477 39.3775L42.5137 42.2116C42.0772 42.6481 42.0772 43.3566 42.5137 43.7931C42.9502 44.2296 43.6587 44.2296 44.0953 43.7931L49.6278 38.2606L48.837 37.4698Z" fill="white"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_20_44">
+                    <rect x="40.1414", y="28.5806", width="13.6882", height="13.6882", rx="3", transform="rotate(45 40.1414 28.5806)", fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+            .card-flex-wrapper
+              .card-date
+                span
+                  span 23
+                  span  ноя
+                  span  <br>2022
+              h3= project.title

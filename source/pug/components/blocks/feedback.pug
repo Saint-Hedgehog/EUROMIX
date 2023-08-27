@@ -1,0 +1,98 @@
+mixin feedback()
+  -
+    const feedbackSliderList = [
+      {
+        path: "../img/slides/feedback",
+        image: "feedback",
+        format: "jpg",
+        width: "188",
+        height: "213",
+        altText: "feedback",
+        feedbackZoom: "feedbackZoom1",
+        imageZoom: "feedback1",
+        altTextZoom: "Feedback1",
+      },
+      {
+        path: "../img/slides/feedback",
+        image: "feedback",
+        format: "jpg",
+        width: "188",
+        height: "213",
+        altText: "feedback",
+        feedbackZoom: "feedbackZoom2",
+        imageZoom: "feedback2",
+        altTextZoom: "Feedback2",
+      },
+      {
+        path: "../img/slides/feedback",
+        image: "feedback",
+        format: "jpg",
+        width: "188",
+        height: "213",
+        altText: "feedback",
+        feedbackZoom: "feedbackZoom1",
+        imageZoom: "feedback1",
+        altTextZoom: "Feedback1",
+      },
+      {
+        path: "../img/slides/feedback",
+        image: "feedback",
+        format: "jpg",
+        width: "188",
+        height: "213",
+        altText: "feedback",
+        feedbackZoom: "feedbackZoom2",
+        imageZoom: "feedback2",
+        altTextZoom: "Feedback2",
+      },
+      {
+        path: "../img/slides/feedback",
+        image: "feedback",
+        format: "jpg",
+        width: "188",
+        height: "213",
+        altText: "feedback",
+        feedbackZoom: "feedbackZoom2",
+        imageZoom: "feedback2",
+        altTextZoom: "Feedback2",
+      },
+      {
+        path: "../img/slides/feedback",
+        image: "feedback",
+        format: "jpg",
+        width: "188",
+        height: "213",
+        altText: "feedback",
+        feedbackZoom: "feedbackZoom2",
+        imageZoom: "feedback2",
+        altTextZoom: "Feedback2",
+      },
+      {
+        path: "../img/slides/feedback",
+        image: "feedback",
+        format: "jpg",
+        width: "188",
+        height: "213",
+        altText: "feedback",
+        feedbackZoom: "feedbackZoom2",
+        imageZoom: "feedback2",
+        altTextZoom: "Feedback2",
+      },
+    ]
+
+  .feedback
+    .container
+      h2 ОТЗЫВЫ НАШИХ КЛИЕНТОВ
+      p Благодарные отзывы наших клиентов - лучшее подтверждение высокого качества наших работ
+      .feedback__slider-container
+        .feedback__slider.swiper
+          .swiper-wrapper
+            each item in feedbackSliderList
+              .feedback__slide.swiper-slide
+                a.feedback__zoom(href="#", data-open-modal=item.feedbackZoom)
+                  +img(item.path, item.image, item.format, item.width, item.height, item.altText)
+        .feedback__slider-pagination
+
+      each item in feedbackSliderList
+        +modal("modal--feedback")(data-modal=item.feedbackZoom)
+          +modal-feedback(item.imageZoom, item.altTextZoom)

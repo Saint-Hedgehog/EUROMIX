@@ -10,7 +10,7 @@
   position: relative;
   display: block;
   height: 100%;
-  padding-bottom: 18px;
+  padding-bottom: 31px;
   background-color: $color-default-white;
   border-radius: 5px;
   transition: box-shadow $trans-default;
@@ -23,12 +23,6 @@
     box-shadow: 0px 4px 20px 0px $color-black-opacity25;
   }
 
-  &--price {
-    @include hover-focus {
-      box-shadow: 0px 4px 20px 0px $color-zircon;
-    }
-  }
-
   @include active {
     svg>path {
       fill: $color-blue-charcoal;
@@ -36,9 +30,30 @@
   }
 
   &--price {
+    @include hover-focus {
+      box-shadow: 0px 4px 20px 0px $color-zircon;
+    }
+
     @include active {
       svg>path {
         fill: $color-safety-orange;
+      }
+    }
+  }
+
+  &--projects,
+  &--completed-projects {
+    @include active {
+      svg>path {
+        fill: $color-safety-orange;
+      }
+    }
+
+    a {
+      @include active {
+        svg>path {
+          fill: $color-blue-charcoal;
+        }
       }
     }
   }
@@ -55,14 +70,26 @@
   &--price img {
     width: 274px;
     height: 259px;
+    object-fit: cover;
+    object-position: center;
   }
 
   &--projects img {
     width: 273px;
     height: 150px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &--completed-projects img {
+    width: 576px;
+    height: 204px;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
+.card--completed-projects .img-container,
 .card--projects .img-container {
   position: relative;
 }
@@ -73,6 +100,40 @@
   font-size: 15px;
   font-weight: 500;
   color: $color-safety-orange;
+}
+
+.card-flex-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.card-date {
+  min-width: 74px;
+  margin: 0 14px 0 10px;
+  padding: 9px 9px 7px 14px;
+  color: $color-default-white;
+  background-color: $color-dark-orange;
+  border-radius: 5px;
+  transform: skewX(22deg);
+
+  &>span {
+    display: block;
+    transform: skewX(-22deg);
+  }
+
+  & span:first-of-type {
+    font-size: 20px;
+    line-height: 15px;
+  }
+
+  & span {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  & span:last-of-type {
+    font-size: 15px;
+  }
 }
 
 .card {
@@ -98,11 +159,20 @@
     font-weight: 500;
     line-height: 20px;
   }
+
+  &--completed-projects h3 {
+    margin: 14px 0 0 0;
+    font-family: $ff-ubuntu;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $color-default-white;
+  }
 }
 
 .card {
   & p {
-    min-height: 62px;
+    max-height: 62px;
     margin: 0 26.864% 0 9.36%;
     color: $color-сharcoal;
     font-size: 14px;
@@ -179,8 +249,8 @@
     height: 57px;
   }
 
+  &--completed-projects svg,
   &--projects svg {
-    right: 1px;
     width: 57px;
     height: 57px;
   }

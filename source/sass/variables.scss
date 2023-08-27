@@ -12,15 +12,18 @@ $color-accent-second:               #212121;
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 $color-blue-charcoal:               #222a31;
+$color-charcoal:                    #4a4a4a;
 $color-sun:                         #ff8833;
 $color-dark-orange:                 #ff8000;
 $color-safety-orange:               #ff6b00;
 $color-persimmon:                   #ec5600;
 $color-light-grey:                  #d3d3d3;
+$color-very-light-grey:             #c7c7c7;
 $color-suva-grey:                   #8f8f8f;
 $color-сharcoal:                    #474747;
 $color-gainsboro:                   #d9d9d9;
 $color-zircon:                      #d6e2e4;
+$color-white-smoke1:                #f1f1f1;
 $color-white-smoke:                 #f2f2f2;
 $color-azure:                       #eff4f4;
 $color-navy-blue:                   #0060df;
@@ -31,6 +34,9 @@ $color-white-opacity5:              rgba(255, 255, 255, 0.5);
 $color-white-opacity69:             rgba(255, 255, 255, 0.69);
 $color-safety-orange-opacity5:      rgba($color-safety-orange, 0.5);
 $color-safety-orange-opacity8:      rgba($color-safety-orange, 0.8);
+$color-safety-orange-opacity9:      rgba($color-safety-orange, 0.9);
+$color-blue-bayoux5:                rgba(#747778, 0.5);
+$color-color-zircon1:                rgba($color-zircon, 0.10);
 
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;

@@ -45,6 +45,13 @@
     background-color: $color-safety-orange;
   }
 
+  &--details {
+    display: block;
+    width: max-content;
+    padding: 16px 19px 15px 18px;
+    font-weight: 500;
+  }
+
   @include hover-focus {
     outline: 1px solid $color-default-white;
     outline-offset: 2px;

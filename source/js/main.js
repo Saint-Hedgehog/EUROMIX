@@ -7,6 +7,7 @@ import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {dropdowns} from './modules/dropdowns';
 import {initTabs} from './modules/init-tabs';
 import {initPartnersSlider} from './modules/init-partners-slider';
+import {initFeedbackSlider} from './modules/init-feedback-slider';
 
 // ---------------------------------
 
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
   dropdowns();
   initTabs();
   initPartnersSlider();
+  initFeedbackSlider();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
