@@ -1,6 +1,6 @@
 .footer {
   min-height: 576px;
-  padding: 29px 0 40px;
+  padding: 29px 0 22px;
 
   background-image: image-set(url("../img/bg/footer/bg-footer@2x.avif") type("image/avif") 2x,
       url("../img/bg/footer/bg-footer@1x.avif") type("image/avif") 1x,
@@ -10,6 +10,7 @@
       url("../img/bg/footer/bg-footer@1x.png") 1x);
   background-repeat: no-repeat;
   background-color: $color-blue-charcoal;
+  background-position: center bottom;
 }
 
 .footer-top {
@@ -71,6 +72,22 @@
   font-size: 24px;
   font-weight: 500;
   color: $color-default-white;
+  transition: color $trans-default;
+
+  span {
+    transition: color $trans-default,
+      opacity $trans-default;
+  }
+
+  @include hover {
+    color: $color-safety-orange;
+  }
+
+  @include active {
+    span {
+      opacity: 0.5;
+    }
+  }
 }
 
 .footer-top__tel img {
@@ -86,7 +103,7 @@
 .footer__wrapper {
   display: flex;
   margin-left: 15px;
-  gap: 56px;
+  gap: 4.761%;
 }
 
 .footer__contacts {
@@ -94,6 +111,12 @@
   flex-direction: column;
   align-items: flex-start;
   width: 200px;
+  min-width: max-content;
+}
+
+.footer__site-map,
+.footer__catalog {
+  min-width: max-content;
 }
 
 .footer h3 {
@@ -116,6 +139,21 @@
   display: flex;
   font-weight: 500;
   color: $color-default-white;
+
+  span {
+    transition: color $trans-default,
+      opacity $trans-default;
+  }
+
+  @include hover {
+    color: $color-dark-orange;
+  }
+
+  @include active {
+    span {
+      opacity: 0.5;
+    }
+  }
 }
 
 .footer__mail {
@@ -139,6 +177,20 @@
 .footer__logo {
   margin-left: -15px;
   margin-top: 7px;
+
+  @include hover {
+    border-radius: 10px;
+    outline: 1px solid $color-default-white;
+    outline-offset: 2px;
+    box-shadow: 0px 0px 0px 2px $color-navy-blue;
+  }
+
+  @include focus {
+    border-radius: 10px;
+    outline: 1px solid $color-default-white;
+    outline-offset: 2px;
+    box-shadow: 0px 0px 0px 2px $color-navy-blue;
+  }
 }
 
 .footer__social-networks p {
@@ -154,6 +206,26 @@
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.footer__social-networks-wrapper a {
+  svg {
+    fill: $color-safety-orange;
+    transition: fill $trans-default,
+      opacity $trans-default;
+  }
+
+  @include hover {
+    svg {
+      fill: $color-default-white;
+    }
+  }
+
+  @include active {
+    svg {
+      opacity: 0.5;
+    }
+  }
 }
 
 .footer__site-map-list,
@@ -174,6 +246,8 @@
   font-size: 14px;
   font-weight: 500;
   color: $color-default-white;
+  transition: text-decoration $trans-default,
+    color $trans-default;
 
   &::before {
     content: "";
@@ -186,10 +260,37 @@
     border-left: 6px solid $color-safety-orange;
     border-bottom: 4px solid transparent;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: $color-default-white;
+    transition: width $trans-default;
+  }
+
+  @include hover {
+    &::after {
+      width: 100%;
+      transition: width $trans-default;
+    }
+  }
+
+  @include active {
+    color: $color-suva-grey;
+
+    &::after {
+      background-color: $color-suva-grey;
+    }
+  }
 }
 
 .footer__catalog {
-  margin-left: 60px;
+  margin-left: 5.025%;
 }
 
 .footer__map {
@@ -238,6 +339,16 @@
   font-size: 18px;
   line-height: 25px;
   white-space: nowrap;
+  transition: color $trans-default,
+    opacity $trans-default;
+
+  @include hover {
+    color: $color-dark-orange;
+  }
+
+  @include active {
+    opacity: 0.5;
+  }
 }
 
 .footer__map-address .footer__map-mail {
@@ -247,6 +358,17 @@
   font-size: 15px;
   line-height: 25px;
   border-bottom: 1px solid $color-zircon;
+
+  transition: color $trans-default,
+    opacity $trans-default;
+
+  @include hover {
+    color: $color-dark-orange;
+  }
+
+  @include active {
+    opacity: 0.5;
+  }
 }
 
 .footer__map-address p {
@@ -258,4 +380,110 @@
 .footer__map-address .footer__social-networks-wrapper {
   padding-left: 6px;
   gap: 13px;
+}
+
+.footer__map-address .footer__social-networks-vk svg {
+  fill: $color-danube;
+}
+
+.footer__map-address .footer__social-networks-watsapp svg {
+  fill: $color-dark-pastel-green;
+}
+
+.footer__map-address .footer__social-networks-youtube svg {
+  fill: $color-free-speech-red;
+}
+
+.footer__map-address .footer__social-networks-telegram svg {
+  fill: $color-dark-turquoise;
+}
+
+.footer__map-address .footer__social-networks-wrapper a {
+  @include hover {
+    svg {
+      fill: $color-safety-orange;
+    }
+  }
+
+  @include active {
+    svg {
+      opacity: 0.7;
+    }
+  }
+}
+
+.footer__map-address-close-btn {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  transition: background-color $trans-default;
+  cursor: pointer;
+
+  @include hover-focus {
+    &::before {
+      background-color: $color-neon-blue;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background-color: $color-blue-charcoal;
+    transition: background-color $trans-default;
+
+    mask: url("../img/stack.svg#icon-close--blue-charcoal");
+  }
+}
+
+.footer-bottom {
+  margin-top: 19px;
+  padding-top: 21px;
+  border-top: 1px solid rgb(116, 119, 120, 0.5);
+}
+
+.footer-bottom a {
+  display: inline-block;
+  margin-right: 23px;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: $color-default-white;
+  transition: color $trans-default,
+    opacity $trans-default;
+
+  &:first-of-type {
+    padding-left: 16px;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+    margin-left: 9px;
+  }
+
+  @include hover {
+    color: $color-dark-orange;
+  }
+
+  @include active {
+    opacity: 0.5;
+  }
+}
+
+.footer-bottom p {
+  margin: 8px 0 0 0;
+  padding-left: 16px;
+  font-size: 13px;
+  font-weight: 400;
+  color: $color-default-white;
 }

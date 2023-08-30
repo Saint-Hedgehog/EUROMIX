@@ -133,7 +133,11 @@
       </style>
       <main>
         <div class="sitemap">
-          <div class="container"><img src="img/content/logo.png" srcset="img/content/logo@2x.png 2x" width="300" height="150" alt="Логотип проекта">
+          <div class="container">
+            <picture>
+              <source type="image/avif" srcset="img/content/logo/logo.avif, img/content/logo/logo@2x.avif 2x">
+              <source type="image/webp" srcset="img/content/logo/logo.webp, img/content/logo/logo@2x.webp 2x"><img src="img/content/logo/logo.png" srcset="img/content/logo/logo@2x.png 2x" width="220" height="119" alt="Логотип">
+            </picture>
             <h1>Список страниц</h1>
             <ol>
               <li><a href="ui-kit.html">UI-kit — ui-kit.html</a>

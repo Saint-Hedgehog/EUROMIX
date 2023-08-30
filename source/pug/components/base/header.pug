@@ -72,7 +72,7 @@ mixin header(headerMods, currentUrl)
         .header__logo-wrapper
           if(currentUrl === "index.html")
             //- lighthouse снимает 10 баллов SEO за <a> без href
-            +picture("content", "logo", "png", 220, 119, "Логотип")
+            +picture("content/logo", "logo", "png", 220, 119, "Логотип")
           else
             a.header__logo(href="index.html", aria-label="Переход на главную")
               +picture("content/logo", "logo", "png", 220, 119, "Логотип")
